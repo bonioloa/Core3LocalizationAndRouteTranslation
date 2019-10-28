@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <div>
+            @RenderBody()
+    </div>
+     @{ 
+         Dictionary<string, string> routePol = new Dictionary<string, string>();
+         routePol.Add("language", "pl");
+         routePol.Add("controller", "Home");
+         routePol.Add("action", "Index");
+    }
+    <br>
+    <a asp-all-route-data="routePol">Poland</a>
+    @{ 
+        Dictionary<string, string> routeEn = new Dictionary<string, string>();
+        routeEn.Add("language", "en");
+        routeEn.Add("controller", "Home");
+        routeEn.Add("action", "Index");
+    }
+    <br>
+    <a  asp-all-route-data="routeEn">English</a>
+    @{ 
+        Dictionary<string, string> routeDe = new Dictionary<string, string>();
+        routeDe.Add("language", "de");
+        routeDe.Add("controller", "Home");
+        routeDe.Add("action", "Index");
+    }
+    <br>
+    <a asp-all-route-data="routeDe">Deutcheland</a>
+</body>
+</html>
