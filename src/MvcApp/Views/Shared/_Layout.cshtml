@@ -1,13 +1,13 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html > 
 <head>
 </head>
 <body>
     <div>
-            @RenderBody()
+         @RenderBody()
     </div>
     
-     @{ 
+    @{ 
          Dictionary<string, string> routeItMain = new Dictionary<string, string>();
          routeItMain.Add("language", "it");
          routeItMain.Add("controller", "principale");
@@ -15,7 +15,7 @@
     }
     <a asp-all-route-data="routeItMain">Indice italiano</a>
     <br>
-      @{ 
+    @{ 
          Dictionary<string, string> routeItOrd = new Dictionary<string, string>();
          routeItOrd.Add("language", "it");
          routeItOrd.Add("controller", "ordini");
@@ -23,7 +23,17 @@
     }
     <a asp-all-route-data="routeItOrd">Ordini italiani</a>
     <br>
-     @{ 
+
+    @{ 
+         Dictionary<string, string> routeItCtrlAct = new Dictionary<string, string>();
+         routeItCtrlAct.Add("language", "it");
+         routeItCtrlAct.Add("controller", "home");
+         routeItCtrlAct.Add("action", "index");
+    }
+    <a asp-all-route-data="routeItCtrlAct">Indice italiano (route builded with real controller-action)</a>
+    <br>
+
+   @{ 
          Dictionary<string, string> routeEnMain = new Dictionary<string, string>();
          routeEnMain.Add("language", "en");
          routeEnMain.Add("controller", "home");
