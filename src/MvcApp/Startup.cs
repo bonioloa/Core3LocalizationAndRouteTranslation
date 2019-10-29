@@ -26,17 +26,16 @@ namespace MvcApp
 
             var supportedCultures = new[]
             {
-                new CultureInfo("pl"),
                 new CultureInfo("en"),
-                new CultureInfo("de"),
+                new CultureInfo("it"),
                 
             };
             options.SupportedCultures = supportedCultures;
             options.SupportedUICultures = supportedCultures;
 
             options.DefaultRequestCulture = new RequestCulture(
-                culture: "pl"
-                , uiCulture: "pl"
+                culture: "en"
+                , uiCulture: "en"
                 );
 
             options.RequestCultureProviders = new[] {
@@ -48,12 +47,12 @@ namespace MvcApp
                 }
             };
             app.UseRequestLocalization(options);
-
+            
             app.UseRouting();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapDynamicControllerRoute<TranslationTransformer>(
-                    "{language=pl}/{controller=orders}/{action=list}");
+                    "{language=en}/{controller=home}/{action=index}");
             });
         }
     }

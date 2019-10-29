@@ -61,7 +61,7 @@ namespace MvcApp {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to home poland.
+        ///   Looks up a localized string similar to pagina principale.
         /// </summary>
         public static string Home {
             get {
@@ -70,7 +70,7 @@ namespace MvcApp {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to list poland.
+        ///   Looks up a localized string similar to pagina lista.
         /// </summary>
         public static string List {
             get {

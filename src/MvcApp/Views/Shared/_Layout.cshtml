@@ -6,29 +6,40 @@
     <div>
             @RenderBody()
     </div>
+    
      @{ 
-         Dictionary<string, string> routePol = new Dictionary<string, string>();
-         routePol.Add("language", "pl");
-         routePol.Add("controller", "Home");
-         routePol.Add("action", "Index");
+         Dictionary<string, string> routeItMain = new Dictionary<string, string>();
+         routeItMain.Add("language", "it");
+         routeItMain.Add("controller", "principale");
+         routeItMain.Add("action", "indice");
     }
+    <a asp-all-route-data="routeItMain">Indice italiano</a>
     <br>
-    <a asp-all-route-data="routePol">Poland</a>
+      @{ 
+         Dictionary<string, string> routeItOrd = new Dictionary<string, string>();
+         routeItOrd.Add("language", "it");
+         routeItOrd.Add("controller", "ordini");
+         routeItOrd.Add("action", "lista");
+    }
+    <a asp-all-route-data="routeItOrd">Ordini italiani</a>
+    <br>
+     @{ 
+         Dictionary<string, string> routeEnMain = new Dictionary<string, string>();
+         routeEnMain.Add("language", "en");
+         routeEnMain.Add("controller", "home");
+         routeEnMain.Add("action", "index");
+    }
+    <a asp-all-route-data="routeEnMain">English index</a>
+    <br>
     @{ 
-        Dictionary<string, string> routeEn = new Dictionary<string, string>();
-        routeEn.Add("language", "en");
-        routeEn.Add("controller", "Home");
-        routeEn.Add("action", "Index");
+        Dictionary<string, string> routeEnOrd = new Dictionary<string, string>();
+        routeEnOrd.Add("language", "en");
+        routeEnOrd.Add("controller", "orders");
+        routeEnOrd.Add("action", "list");
     }
-    <br>
-    <a  asp-all-route-data="routeEn">English</a>
-    @{ 
-        Dictionary<string, string> routeDe = new Dictionary<string, string>();
-        routeDe.Add("language", "de");
-        routeDe.Add("controller", "Home");
-        routeDe.Add("action", "Index");
-    }
-    <br>
-    <a asp-all-route-data="routeDe">Deutcheland</a>
+    <a asp-all-route-data="routeEnOrd">English Orders </a>
+
+    <a asp-controller="Orders" asp-action="List">Simple url to orders</a><br>
+    <a asp-controller="Home" asp-action="Index">Simple url to home</a><br>
 </body>
 </html>

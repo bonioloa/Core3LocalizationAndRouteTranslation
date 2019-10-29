@@ -11,21 +11,18 @@ namespace MvcApp
                 "en", new Dictionary<string, string>
                 {
                     { "orders", "orders" },
-                    { "list", "list" }
+                    { "list", "list" },
+                    { "home", "home" },
+                    { "index", "index" },
                 }
             },
             {
-                "de", new Dictionary<string, string>
+                "it", new Dictionary<string, string>
                 {
-                    { "bestellungen", "orders" },
-                    { "liste", "list" }
-                }
-            },
-            {
-                "pl", new Dictionary<string, string>
-                {
-                    { "zamowienia", "orders" },
-                    { "lista", "list" }
+                    { "ordini", "orders" },
+                    { "lista", "list" },
+                    { "principale", "home"  },
+                    { "indice", "index" },
                 }
             },
         };

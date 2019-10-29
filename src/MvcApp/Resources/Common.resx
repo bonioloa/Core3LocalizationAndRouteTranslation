@@ -118,9 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Home" xml:space="preserve">
-    <value>home poland</value>
+    <value>pagina principale</value>
   </data>
   <data name="List" xml:space="preserve">
-    <value>list poland</value>
+    <value>pagina lista</value>
   </data>
 </root>
